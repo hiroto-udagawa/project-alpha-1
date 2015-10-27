@@ -12,9 +12,9 @@ import os
 import sys
 
 # Relative path to subject 1 data
-pathtodata = "../../data/ds009/sub001/"
+pathtodata = "../../../data/ds009/sub001/"
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "functions"))
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 # Load events2neural from the stimuli module.
 from stimuli import events2neural

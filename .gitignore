@@ -1,5 +1,8 @@
 .DS_Store
 
+# Large Data Sets
+/data/ds009/
+/data/ds114/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
