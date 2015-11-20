@@ -1,7 +1,7 @@
 """ Tests for bh_procedure in benjamini_hochberg module
 
 Run at the project directory with:
-    nosetests code/utils/tests/test_bh.py
+nosetests code/utils/tests/test_bh.py
 """
 
 # Loading modules.
@@ -24,10 +24,13 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "../functions/"))
 
 # Load our benjamini-hochberg function
 from benjamini_hochberg import bh_procedure
+from hypothesis import t_stat
 
 def test_bh():
-	img = nib.load(pathtoclassdata + "ds114_sub009_t2r1.nii")
-    data = img.get_data()[..., 4:]
+    img = nib.load(pathtoclassdata + "ds114_sub009_t2r1.nii")
+    data = img.get_data()
+    data = data[..., 4:]
+    
     # Read in the convolutions. 
     convolved = np.loadtxt(pathtoclassdata + "ds114_sub009_t2r1_conv.txt")[4:]
     # Create design matrix. 
